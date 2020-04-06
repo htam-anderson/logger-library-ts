@@ -2,8 +2,8 @@
   "name": "logger-library-ts",
   "version": "0.0.1",
   "description": "The library to write log",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts"
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts"
   "scripts": {
     "tsc": "tsc"
   },
