@@ -22,7 +22,9 @@
     "url": "https://github.com/ORESoftware/typescript-library-skeleton.git/issues"
   },
   "homepage": "https://github.com/ORESoftware/typescript-library-skeleton.git#readme",
-  "dependencies": {},
+  "dependencies": {
+    "moment": "^2.24.0"
+  },
   "devDependencies": {
     "@types/node": "^10.17.17",
     "typescript": "~3.8.3"

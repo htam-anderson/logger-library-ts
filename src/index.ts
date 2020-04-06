@@ -1,1 +1,2 @@
-export {Log} from './log'
+export {Logger} from './logger'
+export {LogLevels} from './log-levels'
