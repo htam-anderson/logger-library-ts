@@ -1,2 +1,1 @@
-export { Logger } from './logger';
-export { LogLevels } from './log-levels';
+export {Logger} from './logger';
