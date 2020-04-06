@@ -1,5 +1,6 @@
 import {LogLevels} from "./log-levels";
 import {LogInterface} from './log-interface'
+import * as moment from 'moment'
 
 export class Logger implements LogInterface{
   private logLevel : LogLevels;
@@ -26,10 +27,10 @@ export class Logger implements LogInterface{
 
   private emitLogMessage(msgType: LogLevels, msg: string, supportingDetails: any[]) {
     if (this.logLevel >= msgType) {
+      const logTime = moment(new Date()).format('YYYY-MM-DD HH:mm:ss');
+      console.log(`${logTime} | [${LogLevels[msgType]}] | ${msg}`);
       if (supportingDetails.length > 0){
-        console[msgType](msg, supportingDetails);
-      } else {
-        console[msgType](msg)
+        console.log(`${logTime} | [${LogLevels[msgType]}] | ${supportingDetails}`);
       }
     }
   }
