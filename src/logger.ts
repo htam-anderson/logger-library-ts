@@ -4,7 +4,7 @@ import {LogInterface} from './log-interface'
 export class Logger implements LogInterface{
   private logLevel : LogLevels;
 
-  constructor(private level: LogLevels) {
+  constructor(private level: LogLevels = LogLevels.DEBUG) {
     this.logLevel = level;
   }
 
