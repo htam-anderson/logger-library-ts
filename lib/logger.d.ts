@@ -10,5 +10,5 @@ export declare class Logger implements LogInterface {
   warn(msg: string, supportingDetails: any[]): void;
   error(msg: string, supportingDetails: any[]): void;
   private emitLogMessage;
-  static createStack(): string;
+  private createStack;
 }
