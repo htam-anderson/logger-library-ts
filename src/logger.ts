@@ -25,6 +25,11 @@ export class Logger implements LogInterface {
   }
 
   public error(msg: string, supportingDetails: any[]): void {
+    if (supportingDetails.length > 0) {
+      const stack = '\n' + Logger.createStack() + '\n';
+      supportingDetails.push(stack);
+    }
+
     this.emitLogMessage(this.allLevels.ERROR, msg, supportingDetails);
   }
 
@@ -42,5 +47,24 @@ export class Logger implements LogInterface {
         );
       }
     }
+  }
+
+  static createStack(): string {
+    const stack: string = new Error().stack!.replace('Error\n', '');
+    const array: string[] = stack.split('\n');
+
+    /* istanbul ignore else */
+    if (array[0].indexOf('Logger.') > -1) {
+      // remove current function
+      array.splice(0, 1);
+    }
+
+    /* istanbul ignore else */
+    if (array[0].indexOf('Logger.') > -1) {
+      // remove caller
+      array.splice(0, 1);
+    }
+
+    return array.join('\n');
   }
 }
