@@ -1,38 +1,31 @@
 {
-  "name": "typescript-library-skeleton",
-  "version": "0.0.1001",
-  "description": "Semver-oriented TypeScript library skeleton.",
-  "main": "dist/main.js",
-  "bin": {
-    "example": "cli/example.sh",
-    "example.js": "cli/example.js"
-  },
-  "types": "dist/main.d.ts",
-  "typings": "dist/main.d.ts",
+  "name": "logger-library-ts",
+  "version": "0.0.1",
+  "description": "The library to write log",
+  "main": "lib/main.js",
+  "types": "lib/main.d.ts",
+  "typings": "lib/main.d.ts",
   "scripts": {
-    "test": "echo 'npm test is currently a no-op'",
-    "postinstall": "./assets/postinstall.sh",
     "tsc": "tsc"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ORESoftware/typescript-library-skeleton.git"
+    "url": "git+https://github.com/htam-anderson/logger-library-ts.git"
   },
   "keywords": [
     "typescript",
     "library",
-    "skeleton",
-    "scaffold"
+    "log",
+    "logger"
   ],
-  "author": "YOUR NAME HERE",
-  "license": "SEE LICENSE IN license.md",
+  "author": "htam.anderson@gmail.com",
   "bugs": {
-    "url": "https://github.com/ORESoftware/typescript-library-skeleton/issues"
+    "url": "https://github.com/ORESoftware/typescript-library-skeleton.git/issues"
   },
-  "homepage": "https://github.com/ORESoftware/typescript-library-skeleton#readme",
+  "homepage": "https://github.com/ORESoftware/typescript-library-skeleton.git#readme",
   "dependencies": {},
   "devDependencies": {
-    "@types/node": "^12.7.2",
-    "typescript": "^3.5.3"
+    "@types/node": "^10.17.17",
+    "typescript": "~3.8.3"
   }
 }
