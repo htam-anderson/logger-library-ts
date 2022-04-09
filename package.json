@@ -33,7 +33,7 @@
   },
   "homepage": "https://github.com/ORESoftware/typescript-library-skeleton.git#readme",
   "dependencies": {
-    "moment": "^2.24.0"
+    "moment": "^2.29.2"
   },
   "devDependencies": {
     "@types/node": "^10.17.17",
